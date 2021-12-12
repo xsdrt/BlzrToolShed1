@@ -1,0 +1,18 @@
+﻿<h3>ToolList</h3>
+
+
+
+
+@code {
+    public static List<Tool> Tools = new List<Tool>         //Adding a tool(s) to be displayed that a user can checkout with a salvage price if they fail to return it.
+        {
+            new Tool
+            {
+                Id = 1,
+                Title = "Claw Hammer",
+                Description = "A hammer is a tool for putting nails into objects such as wood. It has a long handle, and a tip with a flat end for hitting nails. The most common type of hammer (sometimes called a claw hammer) has a curved end (on the other side of the hitting end) for pulling nails out.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Hammer2.jpg/220px-Hammer2.svg",
+                Price = 10.00m
+            }
+        };
+}
