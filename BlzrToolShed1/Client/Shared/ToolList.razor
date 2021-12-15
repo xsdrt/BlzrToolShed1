@@ -1,4 +1,24 @@
-﻿<h3>ToolList</h3>
+﻿<ul class="list-unstyled">
+    @foreach (var tool in Tools)        //Run a foreach loop and iterate through the tool list to show and format our tools for display...
+    {
+        <li class="media my-3">
+            <div class="media-img-wrapper mr-2">
+                <a href="#">
+                    <img class="media-img" src="@tool.ImageUrl" alt="@tool.Title" />
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#">
+                    <h4 class="mb-0">@tool.Title</h4>
+                </a>
+                <p>@tool.Description</p>
+                <h5 class="price">
+                    $@tool.Price
+                </h5>
+            </div>
+        </li>
+    }
+</ul>
 
 
 
@@ -11,8 +31,32 @@
                 Id = 1,
                 Title = "Claw Hammer",
                 Description = "A hammer is a tool for putting nails into objects such as wood. It has a long handle, and a tip with a flat end for hitting nails. The most common type of hammer (sometimes called a claw hammer) has a curved end (on the other side of the hitting end) for pulling nails out.",
-                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Hammer2.jpg/220px-Hammer2.svg",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Hammer2.jpg/220px-Hammer2.JPG",
                 Price = 10.00m
+            },
+             new Tool
+            {
+                Id = 2,
+                Title = "Hand Saw; Wood",
+                Description = "A saw is a tool consisting of a tough blade, wire, or chain with a hard toothed edge. It is used to cut through material, very often wood though sometimes metal or stone.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Crosscut_saw.JPG/250px-Crosscut_saw.JPG",
+                Price = 10.00m
+            },
+             new Tool
+            {
+                Id = 3,
+                Title = "Sawzall",
+                Description = "A reciprocating saw is a type of machine-powered saw in which the cutting action is achieved through a push-and-pull (reciprocating) motion of the blade. The name Sawzall is often used and is an example of a generic trademark. This name is from Milwaukee Electric Tool, who first produced a tool of this type in 1951, and in the United States, it is ubiquitously, colloquially applied to tools of this type.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Reciprocating_Saw.JPG/300px-Reciprocating_Saw.JPG",
+                Price = 50.00m
+            },
+            new Tool
+            {
+                Id = 4,
+                Title = "Hammer Drill",
+                Description = "A hammer drill, also known as a percussion drill or impact drill, is a power tool used chiefly for drilling in hard materials.[1][2] It is a type of rotary drill with an impact mechanism that generates a hammering motion. The percussive mechanism provides a rapid succession of short hammer thrusts to pulverize the material to be bored, so as to provide quicker drilling with less effort. If a hammer drill's impact mechanism can be switched off, the tool can be used like a conventional drill to also perform tasks such as screwdriving.",
+                ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Hammer_drill-1.jpg/220px-Hammer_drill-1.jpg",
+                Price = 25.00m
             }
         };
 }
